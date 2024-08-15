@@ -2,7 +2,7 @@
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    scroll-behavior: smooth;
    background: #C9CCD3;
-   background-color: whitesmoke;
+   background-color: white;
 }
 
 :root.dark{
@@ -10,6 +10,7 @@
 }
 
 *{
+   --gradient_green: #37ecba;
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -24,8 +25,29 @@ body{
    align-items: center;
 }
 
+.main{
+   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+   border-radius: 20px;
+   height: 500px;
+   width: 900px;
+   display: flex;
+}
 
+.display,.calc{
+   height: 100%;
+   width: 50%;
+   border-radius: 20px;
+}
 
+.display{
+   background-color: var(--gradient_green);
+   border-radius: 0px 20px 20px 60px;
+}
+
+.calc{
+   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+   border-radius: 20px 0px 20px 20px;
+}
 
 .theme{
    font-size: 2rem;
@@ -39,7 +61,7 @@ body{
 }
 
 .theme:hover{
-   background-color: lightblue;
-   box-shadow: 0px 15px 20px lightblue;
+   background-color: var(--gradient_green);
+   box-shadow: 0px 15px 20px var(--gradient_green);
    transform: translateY(-7px);
 }
