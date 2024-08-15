@@ -1,15 +1,21 @@
-let principal = prompt("Enter total amount of loan");
-let anualInterestRate = prompt("Enter anual interest rate")/100;
-let timespan = prompt("Enter mortgage timespan");
+const theme = document.querySelector(".theme");
 
-const numberOfPayment = timespan*12;
-const monthlyInterestRate = anualInterestRate/12;
+theme.addEventListener("click",() => {
+    document.documentElement.classList.toggle("dark");
+})
 
-let numerator;
-let denominator;
+// let principal = prompt("Enter total amount of loan");
+// let anualInterestRate = prompt("Enter anual interest rate")/100;
+// let timespan = prompt("Enter mortgage timespan");
 
-numerator = monthlyInterestRate*Math.pow((1+monthlyInterestRate),numberOfPayment);
-denominator = Math.pow((1+monthlyInterestRate),numberOfPayment)-1;
+// const numberOfPayment = timespan*12;
+// const monthlyInterestRate = anualInterestRate/12;
 
-const monthlyMortgageAmount = principal*(numerator/denominator);
-alert(monthlyMortgageAmount.toFixed(2));
+// let numerator;
+// let denominator;
+
+// // calculation for monthly repayement 
+// numerator = monthlyInterestRate*Math.pow((1+monthlyInterestRate),numberOfPayment);
+// denominator = Math.pow((1+monthlyInterestRate),numberOfPayment)-1;
+// const monthlyMortgageAmount = principal*(numerator/denominator);
+// alert(monthlyMortgageAmount.toFixed(2));
