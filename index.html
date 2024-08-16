@@ -10,6 +10,32 @@
     <body>
         <div class="main">
             <div class="calc">
+                <div class="heading">
+                    <h3>Mortgage Calculator</h3>
+                    <button class="clear">Clear All</button>
+                </div>
+                <form>
+                    <div class="one">
+                        <label for="principal"></label>
+                        <span class="sign">$</span>
+                        <input id="principal" name="principal" type="text">
+                    </div>
+                    <div class="two">
+                        <div class="twoTime">
+                            <label for="term">Mortgage Term</label>
+                            <input id="term" name="term" type="text">
+                        </div>
+                        <div class="twoInterest">
+                            <label for="interestRate">Interest Rate</label>
+                            <input id="interestRate" name="interestRate" type="text">
+                        </div>
+                    </div>
+                    <div class="three">
+                        <label for="type">Mortgage Type</label>
+                        <input type="radio" id="type" name="type">Repayment
+                        <input type="radio" id="type" name="type">Interest Only
+                    </div>
+                </form>
             </div>
             <div class="display">
 
