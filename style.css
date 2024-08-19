@@ -54,10 +54,7 @@ body{
 .calc{
    background-image: var(--gradient-snow);
    border-radius: 20px 0px 20px 20px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   padding: 30px;
 }
 
 /* 1st */
