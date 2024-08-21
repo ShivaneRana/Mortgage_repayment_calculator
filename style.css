@@ -200,11 +200,40 @@ input:invalid{
 /* this is for the display */
 .display{
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
 
    & > div{
+      width: 80%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
    }
+}
+
+.resultHeading{
+   font-weight: bold;
+   margin-bottom:10px;
+   text-decoration: underline;
+   text-align: center;
+}
+
+.express{
+   padding: 0px 5px;
+   background-color: black;
+   color: white;
+
+   &:hover{
+      background-color: transparent;
+      color:black;
+   }
+}
+
+.resultContent{
+   text-align: center;
 }
 
 /* all the code below is for the purpose of responsive design */
