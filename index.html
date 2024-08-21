@@ -19,17 +19,17 @@
                     <!-- this if for taking principal amount -->
                     <div class="second">
                             <h5>Mortgage Amount</h5>
-                            <input class="principal" type="text">
+                            <input class="principal" type="text" required pattern="[0-9]*">
                     </div>
                     <!-- this is for term and interest rate -->
                     <div class="third">
-                        <div>
+                        <div class="third1">
                             <h5>Mortgage Term</h5>
-                            <input class="term" type="type">
+                            <input class="term" type="type" required pattern="[0-9]*">
                         </div>
-                        <div>
+                        <div class="third2">
                             <h5>Interest Rate</h5>
-                            <input type="text" class="interest"> 
+                            <input type="text" class="interest" required pattern="[0-9]*"> 
                         </div>
                     </div>
                     <!-- this is for type -->
@@ -46,7 +46,7 @@
                     </div>
                     <!-- this is for submiting result -->
                     <div class="fifth">
-                        <button type="button">Calculate Repayment</button>
+                        <button type="button" class="submit">Calculate Repayment</button>
                     </div>
                 </form>
             </div>
