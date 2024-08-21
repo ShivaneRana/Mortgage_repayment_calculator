@@ -35,6 +35,16 @@ h1,h5{
    font-weight: 300;
 }
 
+input{
+   outline: 1px solid #D6D9DC;
+   border: none;
+}
+
+input:focus-visible{
+   outline: none;
+   border: none;
+}
+
 /* main container */
 .main{
    border-radius: 20px;
@@ -106,7 +116,7 @@ h1,h5{
    }
 }
 
-/* this is for styling of second div */
+/* this is for mortgage amount */
 .second{
    & > h5{
       margin-bottom: 7px;
@@ -114,19 +124,41 @@ h1,h5{
 
    & > input{
       width: 100%;
-      padding: 10px;
+      padding: 7px;
+      font-size: 1rem;
    }
 }
 
+/* this is for mortgage term and interest rate */
+.third{
+   & > div > input{
+      width: 100%;
+      padding: 7px;
+   }
+}
 
+/* this is for mortgage type */
+.forth{
 
+}
 
+.shell{
+   outline: 1px solid;
+   padding: 5px;
+   margin: 0px 0px 10px 0px;
+}
 
+/* this is for the submit button */
+.fifth{
 
+   display: flex;
+   justify-content: center;
+   & > button{
+      padding: 10px;
+      width: ;
 
-
-
-
+   }
+}
 
 
 
