@@ -93,7 +93,7 @@ h1,h5{
 }
 
 /* this is to apply margin at bottom of heading */
-.second,.third{
+.third{
    & > div > h5{
       margin-bottom: 7px;
    }
@@ -106,8 +106,17 @@ h1,h5{
    }
 }
 
+/* this is for styling of second div */
+.second{
+   & > h5{
+      margin-bottom: 7px;
+   }
 
-
+   & > input{
+      width: 100%;
+      padding: 10px;
+   }
+}
 
 
 
