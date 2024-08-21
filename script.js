@@ -17,3 +17,13 @@
 const mortgageAmount = document.querySelector(".second"); //this is for amount div not input
 const mortgageTerm = document.querySelector(".third1"); //this is for term div not input
 const mortgageInterest = document.querySelector(".third2"); //this is for rate div no input
+const principal = document.querySelector(".principal"); //mortgage amount input
+const term = document.querySelector(".term"); //mortgage term input
+const interest = document.querySelector(".interest"); //mortgage interest input
+const type = document.querySelectorAll(".choice"); //mortgage type input
+
+type.forEach((item) => {
+    item.addEventListener("click",() => {
+        console.log(item.dataset.uwu);
+    })
+})
