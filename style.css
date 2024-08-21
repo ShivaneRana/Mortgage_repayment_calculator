@@ -51,6 +51,14 @@ input:focus-visible{
    border: none;
 }
 
+input:valid{
+   outline:2px solid green;
+}
+
+input:invalid{
+   outline: 2px solid red;
+}
+
 /* main container */
 .main{
    border-radius: 20px;
