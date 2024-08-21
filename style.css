@@ -47,7 +47,7 @@ input{
 }
 
 input:focus-visible{
-   outline: none;
+   outline: 1px solid black;
    border: none;
 }
 
@@ -151,7 +151,7 @@ input:focus-visible{
 .shell{
    outline: 1px solid;
    border-radius: 5px;
-   padding: 5px;
+   padding: 10px 0px;
    margin: 0px 0px 10px 0px;
 
    & > input{
