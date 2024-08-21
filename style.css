@@ -44,6 +44,7 @@ input{
    border: none;
    cursor: pointer;
    border-radius: 5px;
+   margin-bottom: 5px;
 }
 
 input:focus-visible{
@@ -179,6 +180,7 @@ input:invalid{
    justify-content: center;
    margin-bottom: 10px;
    & > button{
+      cursor:pointer;
       padding: 15px;
       border: none;
       width: 50%;
@@ -193,9 +195,17 @@ input:invalid{
          box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.7);
       }
    }
-
 }
 
+/* this is for the display */
+.display{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   & > div{
+   }
+}
 
 /* all the code below is for the purpose of responsive design */
 /* 1st */
