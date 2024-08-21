@@ -169,14 +169,23 @@ input:focus-visible{
 .fifth{
    display: flex;
    justify-content: center;
+   margin-bottom: 10px;
    & > button{
       padding: 15px;
       border: none;
       width: 50%;
       border-radius: 25px;
       font-weight: bold;
-      background-color: darkorange;
+      background-color: #2EE59D;
+      transition: all 0.20s ease 0.20s;
+
+      &:hover{
+         color: white;
+         transform: translateY(-15px);
+         box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.7);
+      }
    }
+
 }
 
 
