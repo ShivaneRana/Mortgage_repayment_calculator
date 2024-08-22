@@ -236,6 +236,74 @@ input:invalid{
    text-align: center;
 }
 
+.showResult{
+   outline: 1px solid black;
+   padding: 30px;
+   border-radius: 15px;
+   transition: all 0.30s;
+   & > h1,h3{
+      text-decoration: underline;
+      font-weight: bold;
+      color: black;
+      padding: 5px;
+      margin-top: 2px;
+      transition: all 0.30s ease;
+
+      &::before{
+         content: "$";
+      }
+
+      &:hover{
+         background-color: whitesmoke;
+         color: black;
+      }
+   }
+
+   & > hr{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: black;
+   }
+}
+
+.showResultInterestOnly{
+   outline: 1px solid black;
+   padding: 30px;
+   border-radius: 15px;
+   transition: all 0.30s;
+   
+   & > p{
+      white-space: nowrap;
+   }
+
+   & span,h1{
+      font-weight: bold;   
+      text-decoration: underline;
+      transition: all 0.30s ease;
+
+      &:hover{
+         background-color: white;
+
+      }
+   }
+
+   & > p > span{
+         &::after{
+         content: " years";
+      }}
+
+   & > h1{
+      margin-top: 5px;
+      &::before{
+         content: "$";
+      }
+   }
+}
+
+.hide{
+   display: none;
+}
+
 /* all the code below is for the purpose of responsive design */
 /* 1st */
 @media only screen and (max-width:900px){

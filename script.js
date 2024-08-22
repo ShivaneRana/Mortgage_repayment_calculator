@@ -8,7 +8,14 @@ const type = document.querySelectorAll(".choice"); //mortgage type input
 const calculate = document.querySelector(".submit"); //this is for calculate button
 const result = document.querySelector(".result"); //this is for result div
 const clear = document.querySelector(".clear");
+const resultContainer = document.querySelector(".resultContainer");
 let mode;
+const uwumonthly = document.querySelector(".uwumonthly");
+const uwutotal = document.querySelector(".uwutotal");
+const showresult = document.querySelector(".showResult");
+const showResultInterestOnly = document.querySelector(".showResultInterestOnly");
+const uwuYear = document.querySelector(".uwuYear");
+const uwuInterest = document.querySelector(".uwuInterest");
 
 // this makes sure that mode is always the checked type
 type.forEach((item) => {
@@ -55,9 +62,9 @@ function calc(mode){
     let monthlyMortgageAmount = principal*(numerator/denominator);
 
     // all the results
-    monthlyMortgageAmount = monthlyMortgageAmount.toFixed(2);
-    const total = ((monthlyMortgageAmount*12)*timespan).toFixed(2);
-    const interestOnly = total-principal;
+    monthlyMortgageAmount = monthlyMortgageAmount.toFixed(2); //this is monthly repayments
+    const total = ((monthlyMortgageAmount*12)*timespan).toFixed(2); //this is total repayment after interest
+    const interestOnly = total-principal; //this is the extra money that will be payed on top of mortgage amount
 
     if(mode === "repayment"){
         return {monthlyMortgageAmount,total}
@@ -69,11 +76,17 @@ function calc(mode){
 // calculate button logic
 calculate.addEventListener("click",() => {
    const obj = calc(mode);
-   result.textContent = "";
    if(mode === "repayment"){
-    console.log(`Monthly Repayment: ${obj.monthlyMortgageAmount}`);
-    console.log(`You have to Repay totally: ${obj.total}`)
+        resultContainer.classList.add("hide");
+        showResultInterestOnly.classList.add("hide");
+        showresult.classList.remove("hide");
+        uwumonthly.textContent = obj.monthlyMortgageAmount;
+        uwutotal.textContent = obj.total;
    }else{
-    console.log(`You have to repay an extra: ${obj.interestOnly}`);
+        resultContainer.classList.add("hide");
+        showresult.classList.add("hide")
+        showResultInterestOnly.classList.remove("hide");
+        uwuYear.textContent = termValue.value;
+        uwuInterest.textContent = obj.interestOnly;
    }
 })
