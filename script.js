@@ -8,7 +8,19 @@ const type = document.querySelectorAll(".choice"); //mortgage type input
 const calculate = document.querySelector(".submit"); //this is for calculate button
 const result = document.querySelector(".result"); //this is for result div
 const clear = document.querySelector(".clear");
-let mode = "repayment";
+let mode;
+
+// this makes sure that mode is always the checked type
+type.forEach((item) => {
+    if(item.checked === true){
+        if(item.dataset.choice === "repayment"){
+            mode = "repayment";
+        }else{
+            mode = "interest";
+        }
+    }
+})
+
 
 // for finding which option has been picked
 type.forEach((item) => {
