@@ -8,15 +8,25 @@ const type = document.querySelectorAll(".choice"); //mortgage type input
 const calculate = document.querySelector(".submit"); //this is for calculate button
 const result = document.querySelector(".result"); //this is for result div
 const clear = document.querySelector(".clear");
+let mode = "repayment";
 
-// this is to retrieve the value of data-uwu from .choice class
+// for finding which option has been picked
 type.forEach((item) => {
-    item.addEventListener("click",() => {
-        console.log(item.dataset.uwu);
+    item.addEventListener("click", () => {
+        mode = item.dataset.choice;
+        console.log(mode);
     })
 })
 
-function calcM(){
+document.addEventListener("keydown", (e) => {
+    let target = e.key;
+    if(target === "Enter"){
+        calculate.click();
+    }
+})
+
+// this calculate the monthly repayment and total repayment
+function calc(mode){
     let principal = principalValue.value;
     let anualInterestRate = interestValue.value/100;
     let timespan = termValue.value;
@@ -31,11 +41,27 @@ function calcM(){
     numerator = monthlyInterestRate*Math.pow((1+monthlyInterestRate),numberOfPayment);
     denominator = Math.pow((1+monthlyInterestRate),numberOfPayment)-1;
     let monthlyMortgageAmount = principal*(numerator/denominator);
+
+    // all the results
     monthlyMortgageAmount = monthlyMortgageAmount.toFixed(2);
     const total = ((monthlyMortgageAmount*12)*timespan).toFixed(2);
-    return {monthlyMortgageAmount,total};
+    const interestOnly = total-principal;
+
+    if(mode === "repayment"){
+        return {monthlyMortgageAmount,total}
+    }else{
+        return {interestOnly};
+    }
 }
 
+// calculate button logic
 calculate.addEventListener("click",() => {
-    calcM();
+   const obj = calc(mode);
+   result.textContent = "";
+   if(mode === "repayment"){
+    console.log(`Monthly Repayment: ${obj.monthlyMortgageAmount}`);
+    console.log(`You have to Repay totally: ${obj.total}`)
+   }else{
+    console.log(`You have to repay an extra: ${obj.interestOnly}`);
+   }
 })
