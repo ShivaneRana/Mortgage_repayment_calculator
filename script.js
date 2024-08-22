@@ -28,7 +28,6 @@ type.forEach((item) => {
     }
 })
 
-
 // for finding which option has been picked
 type.forEach((item) => {
     item.addEventListener("click", () => {
