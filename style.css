@@ -236,6 +236,10 @@ input:invalid{
    text-align: center;
 }
 
+.resultFinal{
+   
+}
+
 /* all the code below is for the purpose of responsive design */
 /* 1st */
 @media only screen and (max-width:900px){
