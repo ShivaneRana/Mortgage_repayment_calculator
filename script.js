@@ -42,6 +42,10 @@ document.addEventListener("keydown", (e) => {
     if(target === "Enter"){
         calculate.click();
     }
+    
+    if(target === "Escape"){
+        clear.click();
+    }
 })
 
 // this calculate the monthly repayment and total repayment
