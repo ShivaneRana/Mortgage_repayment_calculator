@@ -67,7 +67,7 @@ function calc(mode){
     // all the results
     monthlyMortgageAmount = monthlyMortgageAmount.toFixed(2); //this is monthly repayments
     const total = ((monthlyMortgageAmount*12)*timespan).toFixed(2); //this is total repayment after interest
-    const interestOnly = total-principal; //this is the extra money that will be payed on top of mortgage amount
+    const interestOnly = (total-principal).toFixed(2); //this is the extra money that will be payed on top of mortgage amount
 
     if(mode === "repayment"){
         return {monthlyMortgageAmount,total}
