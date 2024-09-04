@@ -2,6 +2,7 @@
 
 A web-based mortgage repayment calculator designed to compute monthly repayments and interest-only payments based on user inputs. This project includes HTML, CSS, and JavaScript to create an interactive and responsive calculator.
 
+
 ## Features
 
 - **Mortgage Amount**: Input the principal amount of the mortgage.
